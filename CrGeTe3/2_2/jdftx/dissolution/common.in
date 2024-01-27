@@ -1,0 +1,69 @@
+#---Pseudopotentials ---
+ion-species GBRV/$ID_pbe.uspp
+elec-cutoff 20 100 #Ecutsforpsiandrho
+#---Geometry---
+coulomb-interaction Slab 001 #Make z nonperiodic
+coulomb-truncation-embed 0 0 0.5 #Specify center
+cache-projectors no
+#coordination
+lattice Triclinic 25.8975608 25.8975608 34.8552400 90.0000 90.0000 60.0000
+coords-type Lattice 
+ion Cr     0.166669997         0.166669992         0.499824514  0
+ion Cr     0.333329955         0.333329999         0.500175486  0
+ion Cr     0.666670032         0.166669992         0.499824514  0
+ion Cr     0.833329920         0.333329999         0.500175486  0
+ion Cr     0.166669954         0.666670042         0.499824514  0
+ion Cr     0.333329958         0.833329959         0.500175486  0
+ion Cr     0.666669920         0.666670042         0.499824514  0
+ion Cr     0.833329923         0.833329959         0.500175486  0
+ion Ge     0.000000000         0.000000000         0.434540068  0
+ion Ge     0.000000000         0.000000000         0.565469911  0
+ion Ge     0.500000000         0.000000000         0.434540068  0
+ion Ge     0.500000000         0.000000000         0.565469911  0
+ion Ge    -0.000000000         0.500000001         0.434540068  0
+ion Ge    -0.000000000         0.500000001         0.565469911  0
+ion Ge     0.500000017         0.500000001         0.434540068  0
+ion Te     0.312842616         0.000208037         0.594284117  0
+ion Te     0.000208035         0.186949332         0.594284117  0
+ion Te     0.186949314         0.312842631         0.594284117  0
+ion Te     0.187167370         0.499771955         0.405715857  0
+ion Te     0.499771966         0.313060673         0.405715857  0
+ion Te     0.313060663         0.187167373         0.405715857  0
+ion Te     0.812842721         0.000208037         0.594284117  0
+ion Te     0.500208052         0.186949332         0.594284117  0
+ion Te     0.686949349         0.312842631         0.594284117  0
+ion Te     0.687167370         0.499771955         0.405715857  0
+ion Te     0.999772001         0.313060673         0.405715857  0
+ion Te     0.813060698         0.187167373         0.405715857  0
+ion Te     0.312842648         0.500208078         0.594284117  0
+ion Te     0.000208005         0.686949393         0.594284117  0
+ion Te     0.186949356         0.812842652         0.594284117  0
+ion Te     0.187167388         0.999771956         0.405715857  0
+ion Te     0.499771958         0.813060653         0.405715857  0
+ion Te     0.313060675         0.687167314         0.405715857  0
+ion Te     0.812842683         0.500208078         0.594284117  0
+ion Te     0.500208074         0.686949393         0.594284117  0
+ion Te     0.686949321         0.812842652         0.594284117  0
+ion Te     0.687167283         0.999771956         0.405715857  0
+ion Te     0.999772132         0.813060653         0.405715857  0
+ion Te     0.813060780         0.687167314         0.405715857  0
+#---Electronic ---
+kpoint-folding 3 3 1 #Gamma-centeredk-mesh
+elec-smearing Gauss 0.0073499
+#coulomb-truncation-ion-margin 1
+#target-mu -0.2447504 #U=2.0V vs. SHE #Fixechempotential
+#target-mu -0.1712518 #U=2.0V vs. SHE #Fixechempotential
+#For the CANDLE solvation model, mu_SHE = -4.66 eV
+#muSHE = 0.1712518 U=0 V vs. SHE
+core-overlap-check None
+#---Fluid---
+#spintype z-spin
+fluid LinearPCM #Classof solvation model
+pcm-variant CANDLE #Specificmodelwithinclass
+fluid-solvent H2O #Aqueous electrolyte
+fluid-cation Na+ 1. #1 mol/L Na+ cation
+fluid-anion F- 1. #1 mol/L F- anion
+#---Outputs ---
+dump-name NbTe2.$VAR      #This will overwrite outputs from successive runs
+initial-state NbTe2.$VAR  #This will initialize from the preceding calculation
+dump End State

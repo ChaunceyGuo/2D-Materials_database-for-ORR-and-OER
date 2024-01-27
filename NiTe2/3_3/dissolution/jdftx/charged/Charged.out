@@ -1,0 +1,1295 @@
+
+*************** JDFTx 1.5.0  ***************
+
+Start date and time: Mon Jul  6 03:51:45 2020
+Executable jdftx_gpu with command-line: -i Charged.in -o Charged.out
+Running on hosts (process indices):  amax (0)
+Divided in process groups (process indices):  0 (0)
+gpuInit: Found compatible cuda device 0 'Tesla K80'
+gpuInit: Selected device 0
+Resource initialization completed at t[s]:     10.73
+Run totals: 1 processes, 24 threads, 1 GPUs
+
+
+Input parsed successfully to the following command list (including defaults):
+
+basis kpoint-dependent
+cache-projectors no
+coords-type Lattice
+core-overlap-check none
+coulomb-interaction Slab 001
+coulomb-truncation-embed 0 0 0.5
+davidson-band-ratio 1.1
+dump End State
+dump-name NbTe2.$VAR
+elec-cutoff 20 100
+elec-eigen-algo Davidson
+elec-ex-corr gga-PBE
+elec-smearing Gauss 0.0073499
+electronic-minimize  \
+	dirUpdateScheme      FletcherReeves \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-08 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+electronic-scf  \
+	nIterations	300 \
+	energyDiffThreshold	1e-08 \
+	residualThreshold	1e-07 \
+	mixFraction	0.5 \
+	qMetric	0.8 \
+	history	10 \
+	nEigSteps	2 \
+	eigDiffThreshold	1e-08 \
+	mixedVariable	Density \
+	qKerker	0.8 \
+	qKappa	-1 \
+	verbose	no \
+	mixFractionMag	1.5
+exchange-regularization WignerSeitzTruncated
+fluid LinearPCM 298.000000 1.013250
+fluid-anion F- 1 MeanFieldLJ \
+	epsBulk 1 \
+	pMol 0 \
+	epsInf 1 \
+	Pvap 0 \
+	sigmaBulk 0 \
+	Rvdw 2.24877 \
+	Res 0 \
+	tauNuc 343133
+fluid-cation Na+ 1 MeanFieldLJ \
+	epsBulk 1 \
+	pMol 0 \
+	epsInf 1 \
+	Pvap 0 \
+	sigmaBulk 0 \
+	Rvdw 2.19208 \
+	Res 0 \
+	tauNuc 343133
+fluid-ex-corr lda-TF lda-PZ
+fluid-gummel-loop 10 1.000000e-05
+fluid-minimize  \
+	dirUpdateScheme      PolakRibiere \
+	linminMethod         DirUpdateRecommended \
+	nIterations          400 \
+	history              15 \
+	knormThreshold       1e-11 \
+	energyDiffThreshold  0 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      6 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+fluid-solvent H2O 55.338 ScalarEOS \
+	epsBulk 78.4 \
+	pMol 0.92466 \
+	epsInf 1.77 \
+	Pvap 1.06736e-10 \
+	sigmaBulk 4.62e-05 \
+	Rvdw 2.61727 \
+	Res 1.42 \
+	tauNuc 343133 \
+	poleEl 15 7 1
+forces-output-coords Positions
+initial-state NbTe2.$VAR
+ion Ni  -0.000385375180761  -0.000770750361523   0.500878581965282 0
+ion Ni   0.335876276929334   0.001273137964667   0.502920908554928 0
+ion Ni   0.665396883035335   0.001273137964667   0.502920908554928 0
+ion Ni   0.993143127190357   0.329901560595182   0.494509747867340 0
+ion Ni   0.336758433404825   0.329901560595182   0.494509747867340 0
+ion Ni   0.665396869035333   0.330783720070669   0.502920908554928 0
+ion Ni  -0.000385371180761   0.667055403180760   0.500878581965282 0
+ion Ni   0.336758440404822   0.673526898809642   0.494509747867340 0
+ion Ni   0.667440774361521   0.667055403180760   0.500878581965282 0
+ion Te   0.112945216023578   0.225890431047159   0.421948804172567 0
+ion Te   0.225234521227409   0.119573676222817   0.578288025708078 0
+ion Te   0.453699092104468   0.212960903895532   0.417440809569673 0
+ion Te   0.555560008999997   0.111109999000000   0.586241825105435 0
+ion Te   0.759261789791055   0.212960903895532   0.417440809569673 0
+ion Te   0.894339186995410   0.119573676222817   0.578288025708078 0
+ion Te   0.112945220023578   0.553724787976419   0.421948804172567 0
+ion Te   0.440769569952845   0.553724787976419   0.421948804172567 0
+ion Te   0.547096318777183   0.441425473772594   0.578288025708078 0
+ion Te   0.777438331325568   0.554876747651139   0.422809974004692 0
+ion Te   0.894339173995405   0.441425473772594   0.578288025708078 0
+ion Te   0.111793263348855   0.889231703674428   0.422809974004692 0
+ion Te   0.225234566227410   0.772330846004593   0.578288025708078 0
+ion Te   0.453699121104474   0.907408261208942   0.417440809569673 0
+ion Te   0.547096344777185   0.772330846004593   0.578288025708078 0
+ion Te   0.777438312325570   0.889231703674428   0.422809974004692 0
+ion Te   0.888890044000000   0.777780002000000   0.582289402242649 0
+ion-species GBRV/$ID_pbe.uspp
+ion-width Ecut
+ionic-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0.0001 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+kpoint   0.000000000000   0.000000000000   0.000000000000  1.00000000000000
+kpoint-folding 3 3 1 
+latt-move-scale 1 1 1
+latt-scale 1 1 1 
+lattice Triclinic 21.0455 21.0455 33.2495 90 90 120
+lattice-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+lcao-params -1 1e-06 0.0073499
+pcm-variant CANDLE
+spintype no-spin
+subspace-rotation-factor 1 yes
+symmetries automatic
+symmetry-threshold 0.0001
+target-mu -0.24475 no
+
+
+
+
+---------- Setting up symmetries ----------
+
+Found 24 point-group symmetries of the bravais lattice
+Found 6 space-group symmetries with basis
+Applied RMS atom displacement 8.28625e-05 bohrs to make symmetries exact.
+
+---------- Initializing the Grid ----------
+R = 
+[    21.0455   -10.5228          0  ]
+[          0    18.2259          0  ]
+[          0          0    33.2495  ]
+unit cell volume = 12753.7
+G =
+[   0.298552   0.172369         -0  ]
+[          0   0.344739          0  ]
+[          0         -0   0.188971  ]
+Minimum fftbox size, Smin = [  96  96  152  ]
+Chosen fftbox size, S = [  96  96  160  ]
+
+---------- Initializing tighter grid for wavefunction operations ----------
+R = 
+[    21.0455   -10.5228          0  ]
+[          0    18.2259          0  ]
+[          0          0    33.2495  ]
+unit cell volume = 12753.7
+G =
+[   0.298552   0.172369         -0  ]
+[          0   0.344739          0  ]
+[          0         -0   0.188971  ]
+Minimum fftbox size, Smin = [  88  88  136  ]
+Chosen fftbox size, S = [  90  90  140  ]
+
+---------- Exchange Correlation functional ----------
+Initalized PBE GGA exchange.
+Initalized PBE GGA correlation.
+
+---------- Setting up pseudopotentials ----------
+Width of ionic core gaussian charges (only for fluid interactions / plotting) set to 0.397384
+
+Reading pseudopotential file '/home/guoxy/vasp/jdftx-1.5.0/build/pseudopotentials/GBRV/ni_pbe.uspp':
+  Title: Ni.  Created by USPP 7.3.6 on 1-4-15
+  Reference state energy: -170.398381.  18 valence electrons in orbitals:
+    |300>  occupation: 2  eigenvalue: -4.804705
+    |310>  occupation: 6  eigenvalue: -3.347751
+    |320>  occupation: 8  eigenvalue: -1.042415
+    |400>  occupation: 0  eigenvalue: -0.795539
+    |410>  occupation: 0  eigenvalue: -0.551375
+  lMax: 2  lLocal: 3  QijEcut: 6.5
+  6 projectors sampled on a log grid with 611 points:
+    l: 0  eig: -4.804708  rCut: 1.44
+    l: 0  eig: -0.795541  rCut: 1.44
+    l: 1  eig: -3.347753  rCut: 1.55
+    l: 1  eig: 0.500000  rCut: 1.55
+    l: 2  eig: -1.042418  rCut: 1.5
+    l: 2  eig: -0.450000  rCut: 1.5
+  Partial core density with radius 0.65
+  Transforming core density to a uniform radial grid of dG=0.02 with 1626 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1626 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1626 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 1.55 bohrs.
+
+Reading pseudopotential file '/home/guoxy/vasp/jdftx-1.5.0/build/pseudopotentials/GBRV/te_pbe.uspp':
+  Title: Te.  Created by USPP 7.3.6 on 14-9-2013
+  Reference state energy: -13.134220.  6 valence electrons in orbitals:
+    |500>  occupation: 2  eigenvalue: -0.555231
+    |510>  occupation: 4  eigenvalue: -0.218781
+  lMax: 2  lLocal: 2  QijEcut: 5
+  5 projectors sampled on a log grid with 723 points:
+    l: 0  eig: -0.555229  rCut: 2.1
+    l: 0  eig: 1.000000  rCut: 2.1
+    l: 1  eig: -0.218780  rCut: 2.1
+    l: 1  eig: 1.000000  rCut: 2.1
+    l: 2  eig: 1.000000  rCut: 2.6
+  Partial core density with radius 1.8
+  Transforming core density to a uniform radial grid of dG=0.02 with 1626 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1626 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1626 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 2.60 bohrs.
+
+Initialized 2 species with 26 total atoms.
+
+Folded 1 k-points by 3x3x1 to 9 k-points.
+
+---------- Setting up k-points, bands, fillings ----------
+Adding inversion symmetry to k-mesh for non-inversion-symmetric unit cell.
+Reduced to 3 k-points under symmetry. 
+Computing the number of bands and number of electrons
+Reading initial fillings from file NbTe2.fillings.
+nElectrons: 264.000000   nBands: 185   nStates: 3
+
+----- Setting up reduced wavefunction bases (one per k-point) -----
+average nbasis = 54474.111 , ideal nbasis = 54484.601
+
+---------- Setting up coulomb interaction ----------
+Fluid mode embedding: using embedded box, but periodic Coulomb kernel.
+(Fluid response is responsible for (approximate) separation between periodic images.)
+Setting up double-sized grid for truncated Coulomb potentials:
+R = 
+[    21.0455   -10.5228          0  ]
+[          0    18.2259          0  ]
+[          0          0    66.4991  ]
+unit cell volume = 25507.3
+G =
+[   0.298552   0.172369         -0  ]
+[          0   0.344739          0  ]
+[          0         -0  0.0944853  ]
+Chosen fftbox size, S = [  96  96  320  ]
+Integer grid location selected as the embedding center:
+   Grid: [  0  0  80  ]
+   Lattice: [  0  0  0.5  ]
+   Cartesian: [  0  0  16.6248  ]
+Constructing Wigner-Seitz cell: 8 faces (6 quadrilaterals, 2 hexagons)
+Range-separation parameter for embedded mesh potentials due to point charges: 0.590682 bohrs.
+
+Initializing van der Waals corrections
+	NOTE: vdW corrections apply only for interactions with fluid.
+	Ni:  C6:  187.33 Eh-a0^6  R0: 2.952 a0
+	Te:  C6:  550.54 Eh-a0^6  R0: 3.575 a0
+
+---------- Setting up ewald sum ----------
+Optimum gaussian width for ewald sums = 6.822907 bohr.
+Real space sum over 605 unit cells with max indices [  5  5  2  ]
+Reciprocal space sum over 5577 terms with max indices [  6  6  16  ]
+
+---------- Allocating electronic variables ----------
+Initializing wave functions:  reading from 'NbTe2.wfns'
+----- createFluidSolver() ----- (Fluid-side solver setup)
+   Initializing fluid molecule 'H2O'
+     Initializing site 'O'
+       Electron density: proportional to exp(-r/0.36935)*erfc((r-0.51523)/0.36823) with norm 6.826
+       Charge density: gaussian nuclear width 0.478731 with net site charge 0.826
+       Polarizability: cuspless exponential with width 0.32 and norm 3.73
+       Hard sphere radius: 2.57003 bohrs
+       Positions in reference frame:
+         [ +0.000000 +0.000000 +0.000000 ]
+     Initializing site 'H'
+       Electron density: proportional to exp(-r/0.34641)*erfc((r-0)/0.390882) with norm 0.587
+       Charge density: gaussian nuclear width 0.377945 with net site charge -0.413
+       Polarizability: cuspless exponential with width 0.39 and norm 3.3
+       Positions in reference frame:
+         [ +0.000000 -1.441945 +1.122523 ]
+         [ +0.000000 +1.441945 +1.122523 ]
+     Net charge: 0   dipole magnitude: 0.927204
+     Initializing spherical shell mfKernel with radius 2.61727 Bohr
+     deltaS corrections:
+       site 'O': -7.54299
+       site 'H': -6.83917
+   Initializing fluid molecule 'Na+'
+     Initializing site 'Na'
+       Electron density: proportional to exp(-r/0.19682)*erfc((r-0.71491)/0.41314) with norm 8.1383
+       Charge density: gaussian nuclear width 0.365347 with net site charge -1
+       Hard sphere radius: 1.86327 bohrs
+       Positions in reference frame:
+         [ +0.000000 +0.000000 +0.000000 ]
+     Net charge: -1   dipole magnitude: 0
+     Initializing gaussian mfKernel with width: 1.55004 Bohr
+     deltaS corrections:
+       site 'Na': -22.3555
+   Initializing fluid molecule 'F-'
+     Initializing site 'F'
+       Electron density: proportional to exp(-r/0.38886)*erfc((r-0)/0.438782) with norm 8
+       Charge density: gaussian nuclear width 0.374796 with net site charge 1
+       Hard sphere radius: 2.39995 bohrs
+       Positions in reference frame:
+         [ +0.000000 +0.000000 +0.000000 ]
+     Net charge: 1   dipole magnitude: 0
+     Initializing gaussian mfKernel with width: 1.59012 Bohr
+     deltaS corrections:
+       site 'F': -9.04335
+
+Correction to mu due to finite nuclear width = -0.0102693
+   Cavity determined by nc: 0.00142 and sigma: 0.707107
+   Nonlocal vdW cavity from gaussian model electron density with norm = 8 and sigma = 0.993594 bohr
+   Charge asymmetry in cavity with sensitivity pCavity = 36.5 e-bohr/Eh
+   Electrostatic cavity expanded by eta = 1.46 bohrs
+   Weighted density cavitation model constrained by Nbulk: 0.0049383 bohr^-3, Pvap: 3.14029 kPa, Rvdw: 2.61727 bohr and sigmaBulk: 4.62e-05 Eh/bohr^2 at T: 298 K.
+   Weighted density dispersion model using vdW pair potentials with single solvent site with sqrtC6eff: 0.77 SI.
+Reading fluid state from 'NbTe2.fluidState'
+
+
+---- Citations for features of the code used in this run ----
+
+   Software package:
+      R. Sundararaman, K. Letchworth-Weaver, K.A. Schwarz, D. Gunceler, Y. Ozhabes and T.A. Arias, 'JDFTx: software for joint density-functional theory', SoftwareX 6, 278 (2017)
+
+   gga-PBE exchange-correlation functional:
+      J.P. Perdew, K. Burke and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996)
+
+   Pseudopotentials:
+      KF Garrity, JW Bennett, KM Rabe and D Vanderbilt, Comput. Mater. Sci. 81, 446 (2014)
+
+   Truncated Coulomb potentials:
+      R. Sundararaman and T.A. Arias, Phys. Rev. B 87, 165122 (2013)
+
+   Van der Waals correction pair-potentials:
+      S. Grimme, J. Comput. Chem. 27, 1787 (2006)
+
+   Charge-asymmetric nonlocally-determined local-electric (CANDLE) solvation model:
+      R. Sundararaman and W.A. Goddard III, J. Chem. Phys. 142, 064107 (2015)
+
+   Grand-canonical (fixed-potential) DFT:
+      R. Sundararaman, W. A. Goddard III and T. A. Arias, J. Chem. Phys. 146, 114104 (2017)
+
+This list may not be complete. Please suggest additional citations or
+report any other bugs at https://github.com/shankar1729/jdftx/issues
+
+Initialization completed successfully at t[s]:     17.56
+
+Shifting auxilliary hamiltonian by -0.086646 to set nElectrons=264.000000
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.745239 of unit cell:	Completed after 0 iterations at t[s]:     20.67
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 264.000000
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.745239 of unit cell:	Completed after 0 iterations at t[s]:     24.12
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 190.215920
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762743 of unit cell:	Completed after 28 iterations at t[s]:     46.55
+SCF: Cycle:  0   G: -1405.318766576470807   dG: +2.123e+02   |Residual|: 5.459e+00   |deigs|: 5.943e-07  t[s]:     47.33
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.718605 of unit cell:	Completed after 22 iterations at t[s]:     49.61
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 326.499758
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.814937 of unit cell:	Completed after 25 iterations at t[s]:     73.19
+SCF: Cycle:  1   G: -1461.764887899682662   dG: -5.645e+01   |Residual|: 8.732e+00   |deigs|: 9.205e-01  t[s]:     73.87
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.718938 of unit cell:	Completed after 17 iterations at t[s]:     75.62
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 298.261502
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.814359 of unit cell:	Completed after 23 iterations at t[s]:     98.84
+SCF: Cycle:  2   G: -1565.751002566596981   dG: -1.040e+02   |Residual|: 4.599e+00   |deigs|: 5.238e-01  t[s]:     99.66
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.721591 of unit cell:	Completed after 17 iterations at t[s]:    101.56
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 265.032089
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.769255 of unit cell:	Completed after 30 iterations at t[s]:    126.58
+SCF: Cycle:  3   G: -1613.413416949642851   dG: -4.766e+01   |Residual|: 1.114e+00   |deigs|: 2.925e-01  t[s]:    127.38
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.717455 of unit cell:	Completed after 17 iterations at t[s]:    129.33
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 268.272012
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.808067 of unit cell:	Completed after 35 iterations at t[s]:    153.39
+SCF: Cycle:  4   G: -1613.433868867953379   dG: -2.045e-02   |Residual|: 9.830e-01   |deigs|: 2.338e-02  t[s]:    154.10
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.713841 of unit cell:	Completed after 17 iterations at t[s]:    155.87
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 266.008479
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.781957 of unit cell:	Completed after 30 iterations at t[s]:    179.55
+SCF: Cycle:  5   G: -1615.578041039692835   dG: -2.144e+00   |Residual|: 7.402e-01   |deigs|: 2.230e-02  t[s]:    180.34
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.709267 of unit cell:	Completed after 15 iterations at t[s]:    182.01
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 265.007287
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763499 of unit cell:	Completed after 24 iterations at t[s]:    205.21
+SCF: Cycle:  6   G: -1615.894095494638805   dG: -3.161e-01   |Residual|: 7.905e-01   |deigs|: 6.346e-03  t[s]:    205.98
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.706153 of unit cell:	Completed after 15 iterations at t[s]:    207.77
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 261.708809
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.755239 of unit cell:	Completed after 20 iterations at t[s]:    232.17
+SCF: Cycle:  7   G: -1617.601797847029957   dG: -1.708e+00   |Residual|: 3.208e-01   |deigs|: 1.909e-02  t[s]:    232.98
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.706989 of unit cell:	Completed after 14 iterations at t[s]:    234.60
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 262.380881
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.755195 of unit cell:	Completed after 20 iterations at t[s]:    258.14
+SCF: Cycle:  8   G: -1617.337454353860039   dG: +2.643e-01   |Residual|: 4.558e-01   |deigs|: 4.665e-03  t[s]:    258.96
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.708264 of unit cell:	Completed after 15 iterations at t[s]:    260.74
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 267.211753
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.800533 of unit cell:	Completed after 32 iterations at t[s]:    286.13
+SCF: Cycle:  9   G: -1612.116541930551648   dG: +5.221e+00   |Residual|: 1.484e+00   |deigs|: 4.813e-02  t[s]:    287.04
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.684640 of unit cell:	Completed after 13 iterations at t[s]:    288.80
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 232.399251
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.755322 of unit cell:	Completed after 27 iterations at t[s]:    312.76
+SCF: Cycle: 10   G: -1536.665586481276250   dG: +7.545e+01   |Residual|: 4.479e+00   |deigs|: 1.014e-01  t[s]:    313.44
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.696650 of unit cell:	Completed after 17 iterations at t[s]:    315.14
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 260.900348
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.756688 of unit cell:	Completed after 20 iterations at t[s]:    338.82
+SCF: Cycle: 11   G: -1617.461860355487261   dG: -8.080e+01   |Residual|: 4.170e-01   |deigs|: 5.344e-02  t[s]:    339.88
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.694028 of unit cell:	Completed after 13 iterations at t[s]:    341.70
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 261.865099
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.757193 of unit cell:	Completed after 22 iterations at t[s]:    365.43
+SCF: Cycle: 12   G: -1616.805577890953373   dG: +6.563e-01   |Residual|: 6.926e-01   |deigs|: 9.521e-03  t[s]:    366.13
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.692438 of unit cell:	Completed after 13 iterations at t[s]:    367.63
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 255.572767
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.756018 of unit cell:	Completed after 24 iterations at t[s]:    391.58
+SCF: Cycle: 13   G: -1614.012731802910821   dG: +2.793e+00   |Residual|: 1.048e+00   |deigs|: 3.126e-02  t[s]:    392.31
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.688671 of unit cell:	Completed after 15 iterations at t[s]:    393.99
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 253.842955
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.755935 of unit cell:	Completed after 24 iterations at t[s]:    417.52
+SCF: Cycle: 14   G: -1612.217878107613842   dG: +1.795e+00   |Residual|: 1.233e+00   |deigs|: 1.022e-02  t[s]:    418.22
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.686258 of unit cell:	Completed after 15 iterations at t[s]:    419.87
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 256.841550
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.756288 of unit cell:	Completed after 24 iterations at t[s]:    443.26
+SCF: Cycle: 15   G: -1615.251824737446668   dG: -3.034e+00   |Residual|: 9.228e-01   |deigs|: 7.077e-03  t[s]:    443.94
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.683058 of unit cell:	Completed after 15 iterations at t[s]:    445.55
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.011571
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.757735 of unit cell:	Completed after 20 iterations at t[s]:    468.83
+SCF: Cycle: 16   G: -1617.596729469774345   dG: -2.345e+00   |Residual|: 2.277e-01   |deigs|: 1.148e-02  t[s]:    469.65
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.674532 of unit cell:	Completed after 13 iterations at t[s]:    471.15
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 258.627294
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.759195 of unit cell:	Completed after 20 iterations at t[s]:    493.72
+SCF: Cycle: 17   G: -1617.661339417709542   dG: -6.461e-02   |Residual|: 1.471e-01   |deigs|: 2.815e-03  t[s]:    494.44
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.693542 of unit cell:	Completed after 13 iterations at t[s]:    495.92
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 258.504694
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.756641 of unit cell:	Completed after 20 iterations at t[s]:    520.08
+SCF: Cycle: 18   G: -1617.647869911770385   dG: +1.347e-02   |Residual|: 8.239e-02   |deigs|: 4.463e-03  t[s]:    520.76
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.681030 of unit cell:	Completed after 17 iterations at t[s]:    522.43
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 261.835412
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.744087 of unit cell:	Completed after 34 iterations at t[s]:    546.69
+SCF: Cycle: 19   G: -1614.330818423414030   dG: +3.317e+00   |Residual|: 7.185e-01   |deigs|: 1.318e-02  t[s]:    547.46
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.677349 of unit cell:	Completed after 19 iterations at t[s]:    549.48
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 258.134239
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.761085 of unit cell:	Completed after 21 iterations at t[s]:    573.21
+SCF: Cycle: 20   G: -1617.609304465260266   dG: -3.278e+00   |Residual|: 1.780e-01   |deigs|: 1.316e-02  t[s]:    574.03
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.679328 of unit cell:	Completed after 15 iterations at t[s]:    575.79
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.223107
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.760165 of unit cell:	Completed after 20 iterations at t[s]:    598.73
+SCF: Cycle: 21   G: -1617.745724276367127   dG: -1.364e-01   |Residual|: 9.864e-02   |deigs|: 3.145e-03  t[s]:    599.42
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.688525 of unit cell:	Completed after 15 iterations at t[s]:    601.02
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 258.942399
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.759897 of unit cell:	Completed after 19 iterations at t[s]:    624.13
+SCF: Cycle: 22   G: -1617.738631363274180   dG: +7.093e-03   |Residual|: 6.581e-02   |deigs|: 2.916e-03  t[s]:    624.97
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.714570 of unit cell:	Completed after 18 iterations at t[s]:    627.03
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 256.697829
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762230 of unit cell:	Completed after 22 iterations at t[s]:    651.55
+SCF: Cycle: 23   G: -1617.441268839992063   dG: +2.974e-01   |Residual|: 1.808e-01   |deigs|: 5.895e-03  t[s]:    652.34
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.716965 of unit cell:	Completed after 21 iterations at t[s]:    654.36
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 256.918965
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762413 of unit cell:	Completed after 22 iterations at t[s]:    677.00
+SCF: Cycle: 24   G: -1617.495662146965287   dG: -5.439e-02   |Residual|: 1.693e-01   |deigs|: 1.233e-03  t[s]:    677.83
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.687911 of unit cell:	Completed after 17 iterations at t[s]:    679.77
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 257.274966
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.760982 of unit cell:	Completed after 20 iterations at t[s]:    703.51
+SCF: Cycle: 25   G: -1617.542907078109465   dG: -4.724e-02   |Residual|: 1.260e-01   |deigs|: 3.564e-03  t[s]:    704.48
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.712037 of unit cell:	Completed after 20 iterations at t[s]:    706.63
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.294452
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.761602 of unit cell:	Completed after 18 iterations at t[s]:    729.41
+SCF: Cycle: 26   G: -1617.781189507802765   dG: -2.383e-01   |Residual|: 4.882e-02   |deigs|: 1.615e-02  t[s]:    730.20
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.735598 of unit cell:	Completed after 16 iterations at t[s]:    731.99
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 258.803954
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762379 of unit cell:	Completed after 20 iterations at t[s]:    755.41
+SCF: Cycle: 27   G: -1617.764051729590392   dG: +1.714e-02   |Residual|: 6.371e-02   |deigs|: 1.378e-02  t[s]:    756.12
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.742812 of unit cell:	Completed after 18 iterations at t[s]:    758.08
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.470040
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762538 of unit cell:	Completed after 19 iterations at t[s]:    780.91
+SCF: Cycle: 28   G: -1617.796491091967027   dG: -3.244e-02   |Residual|: 4.570e-02   |deigs|: 2.012e-03  t[s]:    781.60
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.745530 of unit cell:	Completed after 17 iterations at t[s]:    783.43
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.619395
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762497 of unit cell:	Completed after 17 iterations at t[s]:    805.91
+SCF: Cycle: 29   G: -1617.800174629474895   dG: -3.684e-03   |Residual|: 4.190e-02   |deigs|: 8.084e-04  t[s]:    806.65
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.704127 of unit cell:	Completed after 14 iterations at t[s]:    808.18
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.736413
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.760507 of unit cell:	Completed after 18 iterations at t[s]:    831.34
+SCF: Cycle: 30   G: -1617.787475064878436   dG: +1.270e-02   |Residual|: 4.914e-02   |deigs|: 2.501e-03  t[s]:    832.30
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.720607 of unit cell:	Completed after 15 iterations at t[s]:    834.12
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.392111
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.760440 of unit cell:	Completed after 21 iterations at t[s]:    858.22
+SCF: Cycle: 31   G: -1617.773349381338676   dG: +1.413e-02   |Residual|: 5.227e-02   |deigs|: 2.616e-03  t[s]:    858.94
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.733435 of unit cell:	Completed after 18 iterations at t[s]:    860.80
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.851044
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.761131 of unit cell:	Completed after 19 iterations at t[s]:    882.72
+SCF: Cycle: 32   G: -1617.796087432260947   dG: -2.274e-02   |Residual|: 2.978e-02   |deigs|: 1.690e-03  t[s]:    883.42
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.740301 of unit cell:	Completed after 17 iterations at t[s]:    885.23
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.564081
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.761853 of unit cell:	Completed after 18 iterations at t[s]:    907.54
+SCF: Cycle: 33   G: -1617.795008323836555   dG: +1.079e-03   |Residual|: 2.581e-02   |deigs|: 1.337e-03  t[s]:    908.18
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.749868 of unit cell:	Completed after 17 iterations at t[s]:    909.87
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.563772
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762677 of unit cell:	Completed after 19 iterations at t[s]:    933.58
+SCF: Cycle: 34   G: -1617.799916650924615   dG: -4.908e-03   |Residual|: 1.276e-02   |deigs|: 1.219e-03  t[s]:    934.35
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.760032 of unit cell:	Completed after 18 iterations at t[s]:    936.34
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.589646
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763146 of unit cell:	Completed after 16 iterations at t[s]:    959.30
+SCF: Cycle: 35   G: -1617.801349681754346   dG: -1.433e-03   |Residual|: 7.407e-03   |deigs|: 7.761e-04  t[s]:    960.13
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.764004 of unit cell:	Completed after 16 iterations at t[s]:    962.00
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.862824
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763299 of unit cell:	Completed after 16 iterations at t[s]:    984.10
+SCF: Cycle: 36   G: -1617.800354611608782   dG: +9.951e-04   |Residual|: 1.033e-02   |deigs|: 9.456e-04  t[s]:    984.84
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763766 of unit cell:	Completed after 16 iterations at t[s]:    986.66
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.888030
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763155 of unit cell:	Completed after 16 iterations at t[s]:   1009.77
+SCF: Cycle: 37   G: -1617.800560478024863   dG: -2.059e-04   |Residual|: 8.905e-03   |deigs|: 2.701e-04  t[s]:   1010.58
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763462 of unit cell:	Completed after 14 iterations at t[s]:   1012.30
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.691815
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763106 of unit cell:	Completed after 12 iterations at t[s]:   1034.32
+SCF: Cycle: 38   G: -1617.801713024626679   dG: -1.153e-03   |Residual|: 3.848e-03   |deigs|: 5.273e-04  t[s]:   1035.07
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763056 of unit cell:	Completed after 10 iterations at t[s]:   1036.31
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.737994
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763023 of unit cell:	Completed after 14 iterations at t[s]:   1061.03
+SCF: Cycle: 39   G: -1617.801717091354931   dG: -4.067e-06   |Residual|: 3.400e-03   |deigs|: 2.741e-04  t[s]:   1061.87
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763466 of unit cell:	Completed after 11 iterations at t[s]:   1063.41
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.620114
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763107 of unit cell:	Completed after 14 iterations at t[s]:   1085.19
+SCF: Cycle: 40   G: -1617.801566080275279   dG: +1.510e-04   |Residual|: 2.970e-03   |deigs|: 6.871e-04  t[s]:   1085.93
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763430 of unit cell:	Completed after 14 iterations at t[s]:   1087.53
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.768744
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763088 of unit cell:	Completed after 14 iterations at t[s]:   1110.96
+SCF: Cycle: 41   G: -1617.801595019808019   dG: -2.894e-05   |Residual|: 4.084e-03   |deigs|: 8.485e-04  t[s]:   1111.85
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762968 of unit cell:	Completed after 13 iterations at t[s]:   1113.45
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.721849
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763016 of unit cell:	Completed after 10 iterations at t[s]:   1136.98
+SCF: Cycle: 42   G: -1617.801758272203642   dG: -1.633e-04   |Residual|: 8.546e-04   |deigs|: 4.037e-04  t[s]:   1137.68
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762833 of unit cell:	Completed after 9 iterations at t[s]:   1138.92
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.700602
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762988 of unit cell:	Completed after 12 iterations at t[s]:   1160.71
+SCF: Cycle: 43   G: -1617.801749903081372   dG: +8.369e-06   |Residual|: 9.685e-04   |deigs|: 3.629e-04  t[s]:   1161.55
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762828 of unit cell:	Completed after 12 iterations at t[s]:   1163.01
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.730063
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 10 iterations at t[s]:   1186.35
+SCF: Cycle: 44   G: -1617.801761471516784   dG: -1.157e-05   |Residual|: 6.814e-04   |deigs|: 1.731e-04  t[s]:   1187.19
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762870 of unit cell:	Completed after 9 iterations at t[s]:   1188.53
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.703271
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762972 of unit cell:	Completed after 12 iterations at t[s]:   1210.70
+SCF: Cycle: 45   G: -1617.801746104663152   dG: +1.537e-05   |Residual|: 1.737e-03   |deigs|: 3.127e-04  t[s]:   1211.38
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762819 of unit cell:	Completed after 12 iterations at t[s]:   1212.78
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.714914
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762954 of unit cell:	Completed after 10 iterations at t[s]:   1235.44
+SCF: Cycle: 46   G: -1617.801757443561883   dG: -1.134e-05   |Residual|: 1.375e-03   |deigs|: 1.212e-04  t[s]:   1236.24
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762923 of unit cell:	Completed after 10 iterations at t[s]:   1237.59
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.716543
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762966 of unit cell:	Completed after 10 iterations at t[s]:   1259.20
+SCF: Cycle: 47   G: -1617.801762240267863   dG: -4.797e-06   |Residual|: 1.089e-03   |deigs|: 8.216e-05  t[s]:   1259.92
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763062 of unit cell:	Completed after 10 iterations at t[s]:   1261.13
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.703812
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 10 iterations at t[s]:   1283.52
+SCF: Cycle: 48   G: -1617.801756883152166   dG: +5.357e-06   |Residual|: 8.687e-04   |deigs|: 5.386e-04  t[s]:   1284.29
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763088 of unit cell:	Completed after 10 iterations at t[s]:   1285.65
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.709315
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762986 of unit cell:	Completed after 10 iterations at t[s]:   1308.08
+SCF: Cycle: 49   G: -1617.801761765492984   dG: -4.882e-06   |Residual|: 9.794e-04   |deigs|: 1.241e-04  t[s]:   1308.79
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763103 of unit cell:	Completed after 10 iterations at t[s]:   1310.05
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.720947
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762989 of unit cell:	Completed after 8 iterations at t[s]:   1330.63
+SCF: Cycle: 50   G: -1617.801767444153484   dG: -5.679e-06   |Residual|: 7.550e-04   |deigs|: 3.853e-04  t[s]:   1331.29
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763030 of unit cell:	Completed after 8 iterations at t[s]:   1332.40
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.709779
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 10 iterations at t[s]:   1354.49
+SCF: Cycle: 51   G: -1617.801762206316653   dG: +5.238e-06   |Residual|: 9.184e-04   |deigs|: 2.286e-04  t[s]:   1355.26
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763075 of unit cell:	Completed after 10 iterations at t[s]:   1356.81
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.721934
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762986 of unit cell:	Completed after 7 iterations at t[s]:   1378.70
+SCF: Cycle: 52   G: -1617.801768391287624   dG: -6.185e-06   |Residual|: 5.468e-04   |deigs|: 6.271e-05  t[s]:   1379.33
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763127 of unit cell:	Completed after 4 iterations at t[s]:   1380.16
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.740828
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762996 of unit cell:	Completed after 10 iterations at t[s]:   1402.81
+SCF: Cycle: 53   G: -1617.801751178210907   dG: +1.721e-05   |Residual|: 1.345e-03   |deigs|: 2.406e-04  t[s]:   1403.84
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763132 of unit cell:	Completed after 10 iterations at t[s]:   1405.34
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.720774
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762999 of unit cell:	Completed after 8 iterations at t[s]:   1426.09
+SCF: Cycle: 54   G: -1617.801759916306992   dG: -8.738e-06   |Residual|: 1.618e-03   |deigs|: 1.693e-04  t[s]:   1426.82
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763058 of unit cell:	Completed after 7 iterations at t[s]:   1427.80
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.721981
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762986 of unit cell:	Completed after 4 iterations at t[s]:   1448.21
+SCF: Cycle: 55   G: -1617.801768797408386   dG: -8.881e-06   |Residual|: 4.852e-04   |deigs|: 2.746e-04  t[s]:   1448.90
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763077 of unit cell:	Completed after 4 iterations at t[s]:   1449.70
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.739398
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762991 of unit cell:	Completed after 9 iterations at t[s]:   1471.74
+SCF: Cycle: 56   G: -1617.801760176887228   dG: +8.621e-06   |Residual|: 7.913e-04   |deigs|: 6.511e-05  t[s]:   1472.66
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763058 of unit cell:	Completed after 9 iterations at t[s]:   1473.98
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.740402
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762990 of unit cell:	Completed after 10 iterations at t[s]:   1496.42
+SCF: Cycle: 57   G: -1617.801753556617768   dG: +6.620e-06   |Residual|: 1.359e-03   |deigs|: 2.945e-04  t[s]:   1497.13
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763044 of unit cell:	Completed after 10 iterations at t[s]:   1498.44
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.755200
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762988 of unit cell:	Completed after 12 iterations at t[s]:   1520.51
+SCF: Cycle: 58   G: -1617.801729373246644   dG: +2.418e-05   |Residual|: 1.819e-03   |deigs|: 4.392e-04  t[s]:   1521.24
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763045 of unit cell:	Completed after 12 iterations at t[s]:   1522.75
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.762986
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762988 of unit cell:	Completed after 12 iterations at t[s]:   1546.05
+SCF: Cycle: 59   G: -1617.801716219457376   dG: +1.315e-05   |Residual|: 1.857e-03   |deigs|: 3.655e-05  t[s]:   1547.02
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763040 of unit cell:	Completed after 12 iterations at t[s]:   1548.68
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.764916
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762987 of unit cell:	Completed after 12 iterations at t[s]:   1568.82
+SCF: Cycle: 60   G: -1617.801709568384240   dG: +6.651e-06   |Residual|: 2.083e-03   |deigs|: 4.369e-05  t[s]:   1569.47
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763038 of unit cell:	Completed after 12 iterations at t[s]:   1570.86
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.765764
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762987 of unit cell:	Completed after 13 iterations at t[s]:   1589.92
+SCF: Cycle: 61   G: -1617.801706469409510   dG: +3.099e-06   |Residual|: 2.181e-03   |deigs|: 2.756e-05  t[s]:   1590.56
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763035 of unit cell:	Completed after 12 iterations at t[s]:   1591.95
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.767572
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762987 of unit cell:	Completed after 12 iterations at t[s]:   1614.26
+SCF: Cycle: 62   G: -1617.801702981014614   dG: +3.488e-06   |Residual|: 2.163e-03   |deigs|: 1.975e-05  t[s]:   1615.04
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763029 of unit cell:	Completed after 12 iterations at t[s]:   1616.48
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.763631
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762985 of unit cell:	Completed after 12 iterations at t[s]:   1638.35
+SCF: Cycle: 63   G: -1617.801715083657200   dG: -1.210e-05   |Residual|: 1.954e-03   |deigs|: 4.706e-05  t[s]:   1639.01
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763013 of unit cell:	Completed after 13 iterations at t[s]:   1640.56
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.719634
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 7 iterations at t[s]:   1662.87
+SCF: Cycle: 64   G: -1617.801769187905393   dG: -5.410e-05   |Residual|: 4.017e-04   |deigs|: 1.857e-04  t[s]:   1663.61
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762999 of unit cell:	Completed after 4 iterations at t[s]:   1664.48
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.741517
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 10 iterations at t[s]:   1685.73
+SCF: Cycle: 65   G: -1617.801759436898919   dG: +9.751e-06   |Residual|: 9.168e-04   |deigs|: 1.476e-04  t[s]:   1686.50
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.763003 of unit cell:	Completed after 10 iterations at t[s]:   1687.78
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.718602
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 8 iterations at t[s]:   1708.22
+SCF: Cycle: 66   G: -1617.801769358981574   dG: -9.922e-06   |Residual|: 3.181e-04   |deigs|: 7.895e-05  t[s]:   1709.04
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762995 of unit cell:	Completed after 4 iterations at t[s]:   1709.92
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.749892
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 10 iterations at t[s]:   1730.79
+SCF: Cycle: 67   G: -1617.801749461016243   dG: +1.990e-05   |Residual|: 9.728e-04   |deigs|: 1.263e-04  t[s]:   1731.50
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762984 of unit cell:	Completed after 10 iterations at t[s]:   1732.71
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.730480
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 8 iterations at t[s]:   1753.87
+SCF: Cycle: 68   G: -1617.801768462882592   dG: -1.900e-05   |Residual|: 4.658e-04   |deigs|: 1.665e-04  t[s]:   1754.76
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762985 of unit cell:	Completed after 8 iterations at t[s]:   1755.97
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.721224
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 7 iterations at t[s]:   1775.99
+SCF: Cycle: 69   G: -1617.801768223297813   dG: +2.396e-07   |Residual|: 7.720e-04   |deigs|: 3.437e-05  t[s]:   1776.76
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762988 of unit cell:	Completed after 4 iterations at t[s]:   1777.63
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.738782
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 9 iterations at t[s]:   1800.49
+SCF: Cycle: 70   G: -1617.801764121833457   dG: +4.101e-06   |Residual|: 5.129e-04   |deigs|: 6.144e-05  t[s]:   1801.17
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762991 of unit cell:	Completed after 9 iterations at t[s]:   1802.38
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.724752
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 4 iterations at t[s]:   1824.07
+SCF: Cycle: 71   G: -1617.801769749580671   dG: -5.628e-06   |Residual|: 4.937e-04   |deigs|: 5.255e-05  t[s]:   1824.84
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762991 of unit cell:	Completed after 3 iterations at t[s]:   1825.58
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.720597
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 4 iterations at t[s]:   1846.50
+SCF: Cycle: 72   G: -1617.801769756564681   dG: -6.984e-09   |Residual|: 4.471e-04   |deigs|: 2.125e-05  t[s]:   1847.20
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762987 of unit cell:	Completed after 4 iterations at t[s]:   1848.01
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.732333
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 8 iterations at t[s]:   1869.84
+SCF: Cycle: 73   G: -1617.801767793888075   dG: +1.963e-06   |Residual|: 5.238e-04   |deigs|: 5.621e-05  t[s]:   1870.67
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 8 iterations at t[s]:   1871.94
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.720064
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 4 iterations at t[s]:   1894.42
+SCF: Cycle: 74   G: -1617.801769627231806   dG: -1.833e-06   |Residual|: 4.675e-04   |deigs|: 3.789e-05  t[s]:   1895.33
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 4 iterations at t[s]:   1896.25
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.730721
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 9 iterations at t[s]:   1918.18
+SCF: Cycle: 75   G: -1617.801768460923995   dG: +1.166e-06   |Residual|: 5.244e-04   |deigs|: 6.204e-05  t[s]:   1918.86
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 8 iterations at t[s]:   1919.97
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.711284
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 9 iterations at t[s]:   1941.88
+SCF: Cycle: 76   G: -1617.801765584891882   dG: +2.876e-06   |Residual|: 5.790e-04   |deigs|: 6.103e-05  t[s]:   1942.58
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762987 of unit cell:	Completed after 9 iterations at t[s]:   1943.75
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.718835
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 8 iterations at t[s]:   1965.55
+SCF: Cycle: 77   G: -1617.801765408378969   dG: +1.765e-07   |Residual|: 1.159e-03   |deigs|: 3.215e-05  t[s]:   1966.48
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762986 of unit cell:	Completed after 8 iterations at t[s]:   1967.69
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.721809
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 4 iterations at t[s]:   1989.10
+SCF: Cycle: 78   G: -1617.801766544253724   dG: -1.136e-06   |Residual|: 1.112e-03   |deigs|: 4.215e-05  t[s]:   1989.81
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762969 of unit cell:	Completed after 4 iterations at t[s]:   1990.61
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.720696
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 4 iterations at t[s]:   2013.68
+SCF: Cycle: 79   G: -1617.801769823714267   dG: -3.279e-06   |Residual|: 4.825e-04   |deigs|: 6.877e-05  t[s]:   2014.36
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762966 of unit cell:	Completed after 4 iterations at t[s]:   2015.23
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.720222
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 6 iterations at t[s]:   2035.84
+SCF: Cycle: 80   G: -1617.801766380116987   dG: +3.444e-06   |Residual|: 1.175e-03   |deigs|: 4.753e-05  t[s]:   2036.74
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762953 of unit cell:	Completed after 4 iterations at t[s]:   2037.72
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.723498
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 3 iterations at t[s]:   2060.99
+SCF: Cycle: 81   G: -1617.801769238058341   dG: -2.858e-06   |Residual|: 7.985e-04   |deigs|: 6.236e-05  t[s]:   2061.84
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 3 iterations at t[s]:   2062.64
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.722746
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 3 iterations at t[s]:   2084.15
+SCF: Cycle: 82   G: -1617.801769446020444   dG: -2.080e-07   |Residual|: 6.352e-04   |deigs|: 1.511e-04  t[s]:   2084.89
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762988 of unit cell:	Completed after 3 iterations at t[s]:   2085.67
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.721818
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 4 iterations at t[s]:   2106.82
+SCF: Cycle: 83   G: -1617.801769014865840   dG: +4.312e-07   |Residual|: 7.653e-04   |deigs|: 2.196e-05  t[s]:   2107.59
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762989 of unit cell:	Completed after 4 iterations at t[s]:   2108.40
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.715810
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 8 iterations at t[s]:   2131.20
+SCF: Cycle: 84   G: -1617.801766514011888   dG: +2.501e-06   |Residual|: 9.393e-04   |deigs|: 1.190e-04  t[s]:   2131.97
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 9 iterations at t[s]:   2133.30
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.712185
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 10 iterations at t[s]:   2154.57
+SCF: Cycle: 85   G: -1617.801763924690931   dG: +2.589e-06   |Residual|: 8.813e-04   |deigs|: 2.424e-05  t[s]:   2155.24
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762955 of unit cell:	Completed after 10 iterations at t[s]:   2156.47
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.699294
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762977 of unit cell:	Completed after 10 iterations at t[s]:   2177.82
+SCF: Cycle: 86   G: -1617.801747317487070   dG: +1.661e-05   |Residual|: 1.472e-03   |deigs|: 1.033e-04  t[s]:   2178.61
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762963 of unit cell:	Completed after 11 iterations at t[s]:   2180.02
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.697881
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 11 iterations at t[s]:   2200.13
+SCF: Cycle: 87   G: -1617.801743994555181   dG: +3.323e-06   |Residual|: 1.604e-03   |deigs|: 2.318e-05  t[s]:   2200.78
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762986 of unit cell:	Completed after 11 iterations at t[s]:   2202.05
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.732019
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 8 iterations at t[s]:   2224.33
+SCF: Cycle: 88   G: -1617.801768051590216   dG: -2.406e-05   |Residual|: 4.402e-04   |deigs|: 2.703e-04  t[s]:   2225.09
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762965 of unit cell:	Completed after 8 iterations at t[s]:   2226.31
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.722117
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 7 iterations at t[s]:   2248.63
+SCF: Cycle: 89   G: -1617.801767963674138   dG: +8.792e-08   |Residual|: 4.201e-04   |deigs|: 8.217e-05  t[s]:   2249.38
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762974 of unit cell:	Completed after 4 iterations at t[s]:   2250.22
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.730027
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 8 iterations at t[s]:   2271.99
+SCF: Cycle: 90   G: -1617.801768825884665   dG: -8.622e-07   |Residual|: 3.201e-04   |deigs|: 4.319e-05  t[s]:   2272.65
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762961 of unit cell:	Completed after 7 iterations at t[s]:   2273.65
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.718176
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 8 iterations at t[s]:   2296.12
+SCF: Cycle: 91   G: -1617.801766275919135   dG: +2.550e-06   |Residual|: 6.486e-04   |deigs|: 4.809e-05  t[s]:   2297.01
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762959 of unit cell:	Completed after 7 iterations at t[s]:   2298.35
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.741009
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 10 iterations at t[s]:   2320.70
+SCF: Cycle: 92   G: -1617.801759215307356   dG: +7.061e-06   |Residual|: 7.421e-04   |deigs|: 7.844e-05  t[s]:   2321.50
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762954 of unit cell:	Completed after 10 iterations at t[s]:   2322.69
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.710266
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 10 iterations at t[s]:   2343.15
+SCF: Cycle: 93   G: -1617.801760399470822   dG: -1.184e-06   |Residual|: 1.025e-03   |deigs|: 1.456e-04  t[s]:   2343.95
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762960 of unit cell:	Completed after 11 iterations at t[s]:   2345.40
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.732541
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 10 iterations at t[s]:   2367.87
+SCF: Cycle: 94   G: -1617.801764749080348   dG: -4.350e-06   |Residual|: 6.349e-04   |deigs|: 7.254e-05  t[s]:   2368.58
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762956 of unit cell:	Completed after 9 iterations at t[s]:   2369.79
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.685694
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 11 iterations at t[s]:   2394.47
+SCF: Cycle: 95   G: -1617.801718246540077   dG: +4.650e-05   |Residual|: 2.275e-03   |deigs|: 1.466e-04  t[s]:   2395.29
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762964 of unit cell:	Completed after 11 iterations at t[s]:   2396.75
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.703238
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 10 iterations at t[s]:   2418.16
+SCF: Cycle: 96   G: -1617.801755135377107   dG: -3.689e-05   |Residual|: 1.208e-03   |deigs|: 1.117e-04  t[s]:   2418.89
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762967 of unit cell:	Completed after 9 iterations at t[s]:   2420.09
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.706548
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762977 of unit cell:	Completed after 10 iterations at t[s]:   2439.19
+SCF: Cycle: 97   G: -1617.801757887927124   dG: -2.753e-06   |Residual|: 1.248e-03   |deigs|: 7.062e-05  t[s]:   2439.99
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762970 of unit cell:	Completed after 10 iterations at t[s]:   2441.27
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.705252
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 10 iterations at t[s]:   2461.43
+SCF: Cycle: 98   G: -1617.801758339882781   dG: -4.520e-07   |Residual|: 1.027e-03   |deigs|: 1.179e-04  t[s]:   2462.21
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762976 of unit cell:	Completed after 10 iterations at t[s]:   2463.55
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.703674
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 10 iterations at t[s]:   2486.29
+SCF: Cycle: 99   G: -1617.801756439718474   dG: +1.900e-06   |Residual|: 1.065e-03   |deigs|: 2.429e-04  t[s]:   2487.00
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762977 of unit cell:	Completed after 11 iterations at t[s]:   2488.33
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.704775
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 10 iterations at t[s]:   2507.27
+SCF: Cycle: 100   G: -1617.801758254906872   dG: -1.815e-06   |Residual|: 9.738e-04   |deigs|: 8.406e-05  t[s]:   2508.07
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762985 of unit cell:	Completed after 10 iterations at t[s]:   2509.37
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.705471
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 9 iterations at t[s]:   2530.65
+SCF: Cycle: 101   G: -1617.801758990402277   dG: -7.355e-07   |Residual|: 9.815e-04   |deigs|: 2.069e-04  t[s]:   2531.52
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762988 of unit cell:	Completed after 9 iterations at t[s]:   2532.94
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.712262
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 9 iterations at t[s]:   2554.36
+SCF: Cycle: 102   G: -1617.801764971649163   dG: -5.981e-06   |Residual|: 8.450e-04   |deigs|: 1.762e-04  t[s]:   2555.09
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762985 of unit cell:	Completed after 9 iterations at t[s]:   2556.25
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.714320
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 9 iterations at t[s]:   2577.16
+SCF: Cycle: 103   G: -1617.801767153527635   dG: -2.182e-06   |Residual|: 6.611e-04   |deigs|: 1.192e-04  t[s]:   2577.92
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762994 of unit cell:	Completed after 8 iterations at t[s]:   2579.09
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.720124
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 4 iterations at t[s]:   2599.96
+SCF: Cycle: 104   G: -1617.801770098435327   dG: -2.945e-06   |Residual|: 3.400e-04   |deigs|: 1.852e-04  t[s]:   2600.66
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762993 of unit cell:	Completed after 2 iterations at t[s]:   2601.35
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.732823
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 8 iterations at t[s]:   2622.72
+SCF: Cycle: 105   G: -1617.801767471723451   dG: +2.627e-06   |Residual|: 4.442e-04   |deigs|: 9.203e-05  t[s]:   2623.56
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762989 of unit cell:	Completed after 9 iterations at t[s]:   2624.82
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.714564
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 8 iterations at t[s]:   2646.33
+SCF: Cycle: 106   G: -1617.801768431882238   dG: -9.602e-07   |Residual|: 3.543e-04   |deigs|: 7.505e-05  t[s]:   2647.21
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762990 of unit cell:	Completed after 8 iterations at t[s]:   2648.59
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.722776
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 3 iterations at t[s]:   2669.13
+SCF: Cycle: 107   G: -1617.801770456591612   dG: -2.025e-06   |Residual|: 2.410e-04   |deigs|: 8.512e-05  t[s]:   2669.79
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762989 of unit cell:	Completed after 3 iterations at t[s]:   2670.54
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.727717
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 5 iterations at t[s]:   2692.08
+SCF: Cycle: 108   G: -1617.801770007294635   dG: +4.493e-07   |Residual|: 2.860e-04   |deigs|: 5.627e-05  t[s]:   2693.05
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762987 of unit cell:	Completed after 3 iterations at t[s]:   2694.01
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.702805
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 9 iterations at t[s]:   2717.44
+SCF: Cycle: 109   G: -1617.801757290724709   dG: +1.272e-05   |Residual|: 8.033e-04   |deigs|: 1.364e-04  t[s]:   2718.18
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762988 of unit cell:	Completed after 8 iterations at t[s]:   2719.27
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.724016
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 3 iterations at t[s]:   2739.51
+SCF: Cycle: 110   G: -1617.801770402431885   dG: -1.311e-05   |Residual|: 2.969e-04   |deigs|: 6.802e-05  t[s]:   2740.30
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762985 of unit cell:	Completed after 2 iterations at t[s]:   2740.95
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.724185
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 2 iterations at t[s]:   2761.26
+SCF: Cycle: 111   G: -1617.801770615569012   dG: -2.131e-07   |Residual|: 1.336e-04   |deigs|: 1.895e-05  t[s]:   2762.07
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762985 of unit cell:	Completed after 0 iterations at t[s]:   2762.62
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.713859
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 9 iterations at t[s]:   2785.42
+SCF: Cycle: 112   G: -1617.801762291943078   dG: +8.324e-06   |Residual|: 1.480e-03   |deigs|: 5.306e-05  t[s]:   2786.29
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 9 iterations at t[s]:   2787.58
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.721385
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 3 iterations at t[s]:   2809.33
+SCF: Cycle: 113   G: -1617.801770359350712   dG: -8.067e-06   |Residual|: 1.667e-04   |deigs|: 4.460e-05  t[s]:   2810.11
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 3 iterations at t[s]:   2810.86
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.728724
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 6 iterations at t[s]:   2830.20
+SCF: Cycle: 114   G: -1617.801769785740589   dG: +5.736e-07   |Residual|: 2.395e-04   |deigs|: 2.500e-05  t[s]:   2830.90
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762984 of unit cell:	Completed after 7 iterations at t[s]:   2831.95
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.714140
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 8 iterations at t[s]:   2853.84
+SCF: Cycle: 115   G: -1617.801768159060202   dG: +1.627e-06   |Residual|: 3.389e-04   |deigs|: 4.167e-05  t[s]:   2854.77
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762984 of unit cell:	Completed after 9 iterations at t[s]:   2856.23
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.719364
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 7 iterations at t[s]:   2876.78
+SCF: Cycle: 116   G: -1617.801769715448927   dG: -1.556e-06   |Residual|: 3.607e-04   |deigs|: 1.174e-05  t[s]:   2877.47
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 7 iterations at t[s]:   2878.50
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.724161
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 2 iterations at t[s]:   2897.18
+SCF: Cycle: 117   G: -1617.801770550182937   dG: -8.347e-07   |Residual|: 1.668e-04   |deigs|: 1.494e-05  t[s]:   2897.85
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762984 of unit cell:	Completed after 2 iterations at t[s]:   2898.50
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.724065
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 3 iterations at t[s]:   2919.58
+SCF: Cycle: 118   G: -1617.801769669003306   dG: +8.812e-07   |Residual|: 5.979e-04   |deigs|: 3.248e-05  t[s]:   2920.41
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762984 of unit cell:	Completed after 3 iterations at t[s]:   2921.22
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.718674
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 6 iterations at t[s]:   2942.74
+SCF: Cycle: 119   G: -1617.801769775647017   dG: -1.066e-07   |Residual|: 2.130e-04   |deigs|: 2.619e-05  t[s]:   2943.58
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 7 iterations at t[s]:   2944.72
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.723846
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 3 iterations at t[s]:   2967.44
+SCF: Cycle: 120   G: -1617.801770410339941   dG: -6.347e-07   |Residual|: 2.397e-04   |deigs|: 1.573e-05  t[s]:   2968.15
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 2 iterations at t[s]:   2968.84
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.722222
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 3 iterations at t[s]:   2990.49
+SCF: Cycle: 121   G: -1617.801770579810864   dG: -1.695e-07   |Residual|: 9.403e-05   |deigs|: 8.020e-06  t[s]:   2991.33
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 2 iterations at t[s]:   2992.11
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.726865
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 4 iterations at t[s]:   3014.90
+SCF: Cycle: 122   G: -1617.801770122535800   dG: +4.573e-07   |Residual|: 3.230e-04   |deigs|: 2.323e-05  t[s]:   3015.71
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 3 iterations at t[s]:   3016.49
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.708853
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 8 iterations at t[s]:   3038.53
+SCF: Cycle: 123   G: -1617.801763234100008   dG: +6.888e-06   |Residual|: 7.168e-04   |deigs|: 5.571e-05  t[s]:   3039.30
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 8 iterations at t[s]:   3040.54
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.721378
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 4 iterations at t[s]:   3058.54
+SCF: Cycle: 124   G: -1617.801770070909924   dG: -6.837e-06   |Residual|: 3.645e-04   |deigs|: 3.346e-05  t[s]:   3059.32
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762984 of unit cell:	Completed after 2 iterations at t[s]:   3060.06
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.729682
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 7 iterations at t[s]:   3082.50
+SCF: Cycle: 125   G: -1617.801769313638260   dG: +7.573e-07   |Residual|: 3.267e-04   |deigs|: 3.733e-05  t[s]:   3083.48
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 8 iterations at t[s]:   3084.74
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.715970
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 8 iterations at t[s]:   3104.97
+SCF: Cycle: 126   G: -1617.801768979012422   dG: +3.346e-07   |Residual|: 2.953e-04   |deigs|: 4.023e-05  t[s]:   3105.70
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 7 iterations at t[s]:   3106.77
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.722628
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 3 iterations at t[s]:   3128.22
+SCF: Cycle: 127   G: -1617.801770053241853   dG: -1.074e-06   |Residual|: 4.306e-04   |deigs|: 1.648e-05  t[s]:   3128.95
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 3 iterations at t[s]:   3129.68
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.726405
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 3 iterations at t[s]:   3147.85
+SCF: Cycle: 128   G: -1617.801770490483023   dG: -4.372e-07   |Residual|: 8.586e-05   |deigs|: 1.666e-05  t[s]:   3148.68
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 2 iterations at t[s]:   3149.48
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.709856
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 9 iterations at t[s]:   3171.47
+SCF: Cycle: 129   G: -1617.801763712850288   dG: +6.778e-06   |Residual|: 7.811e-04   |deigs|: 4.890e-05  t[s]:   3172.22
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 8 iterations at t[s]:   3173.42
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.720176
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 8 iterations at t[s]:   3189.90
+SCF: Cycle: 130   G: -1617.801769753401686   dG: -6.041e-06   |Residual|: 3.834e-04   |deigs|: 3.228e-05  t[s]:   3190.63
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 7 iterations at t[s]:   3191.72
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.724504
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 3 iterations at t[s]:   3211.25
+SCF: Cycle: 131   G: -1617.801770524267567   dG: -7.709e-07   |Residual|: 1.749e-04   |deigs|: 3.666e-05  t[s]:   3211.98
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 2 iterations at t[s]:   3212.64
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.721721
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 3 iterations at t[s]:   3232.41
+SCF: Cycle: 132   G: -1617.801770462862351   dG: +6.141e-08   |Residual|: 1.937e-04   |deigs|: 1.166e-05  t[s]:   3233.28
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 2 iterations at t[s]:   3234.09
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.726189
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 4 iterations at t[s]:   3255.66
+SCF: Cycle: 133   G: -1617.801770217584135   dG: +2.453e-07   |Residual|: 2.996e-04   |deigs|: 1.902e-05  t[s]:   3256.31
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 2 iterations at t[s]:   3256.96
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.714034
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 8 iterations at t[s]:   3279.29
+SCF: Cycle: 134   G: -1617.801767412008530   dG: +2.806e-06   |Residual|: 4.876e-04   |deigs|: 3.828e-05  t[s]:   3280.07
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 9 iterations at t[s]:   3281.41
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.719943
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 7 iterations at t[s]:   3296.36
+SCF: Cycle: 135   G: -1617.801770004235777   dG: -2.592e-06   |Residual|: 2.662e-04   |deigs|: 1.701e-05  t[s]:   3297.08
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 4 iterations at t[s]:   3297.90
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.734170
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 8 iterations at t[s]:   3314.62
+SCF: Cycle: 136   G: -1617.801767905682709   dG: +2.099e-06   |Residual|: 2.816e-04   |deigs|: 3.777e-05  t[s]:   3315.35
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 8 iterations at t[s]:   3316.42
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.717624
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 8 iterations at t[s]:   3335.54
+SCF: Cycle: 137   G: -1617.801769482474356   dG: -1.577e-06   |Residual|: 3.015e-04   |deigs|: 4.402e-05  t[s]:   3336.30
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 7 iterations at t[s]:   3337.33
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.723874
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 3 iterations at t[s]:   3355.29
+SCF: Cycle: 138   G: -1617.801770195224435   dG: -7.128e-07   |Residual|: 3.497e-04   |deigs|: 1.525e-05  t[s]:   3356.02
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 3 iterations at t[s]:   3356.73
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.722679
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 2 iterations at t[s]:   3375.45
+SCF: Cycle: 139   G: -1617.801770603076875   dG: -4.079e-07   |Residual|: 1.104e-04   |deigs|: 8.104e-06  t[s]:   3376.38
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 1 iterations at t[s]:   3377.02
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.731080
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 8 iterations at t[s]:   3397.20
+SCF: Cycle: 140   G: -1617.801766113767826   dG: +4.489e-06   |Residual|: 1.056e-03   |deigs|: 3.751e-05  t[s]:   3397.94
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762983 of unit cell:	Completed after 9 iterations at t[s]:   3399.23
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.715814
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 8 iterations at t[s]:   3415.89
+SCF: Cycle: 141   G: -1617.801768716260312   dG: -2.602e-06   |Residual|: 3.669e-04   |deigs|: 5.537e-05  t[s]:   3416.65
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 7 iterations at t[s]:   3417.70
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.725137
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 4 iterations at t[s]:   3432.19
+SCF: Cycle: 142   G: -1617.801769961190530   dG: -1.245e-06   |Residual|: 4.192e-04   |deigs|: 2.319e-05  t[s]:   3432.98
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 3 iterations at t[s]:   3433.75
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.719639
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 5 iterations at t[s]:   3451.10
+SCF: Cycle: 143   G: -1617.801770073522221   dG: -1.123e-07   |Residual|: 2.335e-04   |deigs|: 1.657e-05  t[s]:   3452.18
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 3 iterations at t[s]:   3453.26
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.737424
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 8 iterations at t[s]:   3477.33
+SCF: Cycle: 144   G: -1617.801765473549949   dG: +4.600e-06   |Residual|: 3.537e-04   |deigs|: 4.846e-05  t[s]:   3478.04
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 9 iterations at t[s]:   3479.34
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.717980
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 6 iterations at t[s]:   3493.69
+SCF: Cycle: 145   G: -1617.801769824324310   dG: -4.351e-06   |Residual|: 1.917e-04   |deigs|: 5.107e-05  t[s]:   3494.45
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 6 iterations at t[s]:   3495.33
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.724307
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 3 iterations at t[s]:   3511.04
+SCF: Cycle: 146   G: -1617.801770016134697   dG: -1.918e-07   |Residual|: 4.140e-04   |deigs|: 1.526e-05  t[s]:   3511.93
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 3 iterations at t[s]:   3512.85
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.722283
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 3 iterations at t[s]:   3534.25
+SCF: Cycle: 147   G: -1617.801770552927337   dG: -5.368e-07   |Residual|: 1.295e-04   |deigs|: 1.169e-05  t[s]:   3534.90
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 2 iterations at t[s]:   3535.53
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.728650
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 7 iterations at t[s]:   3556.97
+SCF: Cycle: 148   G: -1617.801769331057358   dG: +1.222e-06   |Residual|: 4.754e-04   |deigs|: 2.426e-05  t[s]:   3557.67
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 7 iterations at t[s]:   3558.74
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.713816
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 8 iterations at t[s]:   3577.21
+SCF: Cycle: 149   G: -1617.801767650940747   dG: +1.680e-06   |Residual|: 4.138e-04   |deigs|: 4.504e-05  t[s]:   3577.92
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 9 iterations at t[s]:   3579.20
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.721380
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 4 iterations at t[s]:   3595.82
+SCF: Cycle: 150   G: -1617.801770174448620   dG: -2.524e-06   |Residual|: 2.783e-04   |deigs|: 1.908e-05  t[s]:   3596.51
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 2 iterations at t[s]:   3597.16
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.729033
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 7 iterations at t[s]:   3612.14
+SCF: Cycle: 151   G: -1617.801769800464854   dG: +3.740e-07   |Residual|: 1.791e-04   |deigs|: 2.419e-05  t[s]:   3612.92
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 6 iterations at t[s]:   3613.91
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.714589
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 8 iterations at t[s]:   3633.94
+SCF: Cycle: 152   G: -1617.801768454412013   dG: +1.346e-06   |Residual|: 2.661e-04   |deigs|: 3.892e-05  t[s]:   3634.80
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 8 iterations at t[s]:   3636.01
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.720450
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 7 iterations at t[s]:   3651.24
+SCF: Cycle: 153   G: -1617.801769968308918   dG: -1.514e-06   |Residual|: 3.389e-04   |deigs|: 1.338e-05  t[s]:   3651.94
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 4 iterations at t[s]:   3652.74
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.735012
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 8 iterations at t[s]:   3668.80
+SCF: Cycle: 154   G: -1617.801767237986041   dG: +2.730e-06   |Residual|: 3.703e-04   |deigs|: 4.000e-05  t[s]:   3669.52
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 9 iterations at t[s]:   3670.63
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.718387
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 6 iterations at t[s]:   3686.88
+SCF: Cycle: 155   G: -1617.801769793461744   dG: -2.555e-06   |Residual|: 2.626e-04   |deigs|: 4.248e-05  t[s]:   3687.50
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 6 iterations at t[s]:   3688.38
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.725840
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 4 iterations at t[s]:   3707.35
+SCF: Cycle: 156   G: -1617.801769941191878   dG: -1.477e-07   |Residual|: 4.284e-04   |deigs|: 2.099e-05  t[s]:   3708.24
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 3 iterations at t[s]:   3709.12
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.717782
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 7 iterations at t[s]:   3731.91
+SCF: Cycle: 157   G: -1617.801769424894019   dG: +5.163e-07   |Residual|: 3.193e-04   |deigs|: 2.677e-05  t[s]:   3732.71
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 8 iterations at t[s]:   3733.86
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.722112
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 2 iterations at t[s]:   3752.23
+SCF: Cycle: 158   G: -1617.801770441662029   dG: -1.017e-06   |Residual|: 2.335e-04   |deigs|: 1.144e-05  t[s]:   3753.08
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 3 iterations at t[s]:   3753.87
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.727594
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 6 iterations at t[s]:   3769.89
+SCF: Cycle: 159   G: -1617.801770036722701   dG: +4.049e-07   |Residual|: 2.773e-04   |deigs|: 1.989e-05  t[s]:   3770.60
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 3 iterations at t[s]:   3771.37
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.701744
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 9 iterations at t[s]:   3793.29
+SCF: Cycle: 160   G: -1617.801756340904149   dG: +1.370e-05   |Residual|: 7.363e-04   |deigs|: 7.388e-05  t[s]:   3794.04
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 9 iterations at t[s]:   3795.32
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.721473
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 3 iterations at t[s]:   3810.53
+SCF: Cycle: 161   G: -1617.801770000353372   dG: -1.366e-05   |Residual|: 3.875e-04   |deigs|: 5.092e-05  t[s]:   3811.35
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 3 iterations at t[s]:   3812.22
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.730295
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 6 iterations at t[s]:   3827.51
+SCF: Cycle: 162   G: -1617.801769196631767   dG: +8.037e-07   |Residual|: 3.122e-04   |deigs|: 3.243e-05  t[s]:   3828.20
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762982 of unit cell:	Completed after 8 iterations at t[s]:   3829.26
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.717978
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 7 iterations at t[s]:   3846.56
+SCF: Cycle: 163   G: -1617.801769765809695   dG: -5.692e-07   |Residual|: 2.103e-04   |deigs|: 3.553e-05  t[s]:   3847.48
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 7 iterations at t[s]:   3848.67
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.723287
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 3 iterations at t[s]:   3870.90
+SCF: Cycle: 164   G: -1617.801770317370938   dG: -5.516e-07   |Residual|: 3.259e-04   |deigs|: 1.310e-05  t[s]:   3871.65
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 3 iterations at t[s]:   3872.40
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.725316
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 0 iterations at t[s]:   3889.26
+SCF: Cycle: 165   G: -1617.801770652957657   dG: -3.356e-07   |Residual|: 7.260e-05   |deigs|: 1.073e-05  t[s]:   3890.05
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 0 iterations at t[s]:   3890.55
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.721492
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 2 iterations at t[s]:   3907.44
+SCF: Cycle: 166   G: -1617.801770451883840   dG: +2.011e-07   |Residual|: 2.160e-04   |deigs|: 1.095e-05  t[s]:   3908.15
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 2 iterations at t[s]:   3908.80
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.730213
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 8 iterations at t[s]:   3930.06
+SCF: Cycle: 167   G: -1617.801768269406693   dG: +2.182e-06   |Residual|: 6.836e-04   |deigs|: 2.914e-05  t[s]:   3930.86
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 8 iterations at t[s]:   3932.14
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.716568
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 7 iterations at t[s]:   3949.25
+SCF: Cycle: 168   G: -1617.801769014381989   dG: -7.450e-07   |Residual|: 3.143e-04   |deigs|: 4.162e-05  t[s]:   3950.03
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 7 iterations at t[s]:   3951.03
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.725078
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 3 iterations at t[s]:   3967.09
+SCF: Cycle: 169   G: -1617.801770071688907   dG: -1.057e-06   |Residual|: 3.609e-04   |deigs|: 2.130e-05  t[s]:   3967.90
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 3 iterations at t[s]:   3968.64
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.720336
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 3 iterations at t[s]:   3983.30
+SCF: Cycle: 170   G: -1617.801770303999547   dG: -2.323e-07   |Residual|: 2.018e-04   |deigs|: 1.394e-05  t[s]:   3984.17
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 3 iterations at t[s]:   3985.00
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.732287
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 8 iterations at t[s]:   4007.59
+SCF: Cycle: 171   G: -1617.801767925449667   dG: +2.379e-06   |Residual|: 5.014e-04   |deigs|: 3.717e-05  t[s]:   4008.33
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 8 iterations at t[s]:   4009.51
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.717583
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 8 iterations at t[s]:   4028.59
+SCF: Cycle: 172   G: -1617.801769523664689   dG: -1.598e-06   |Residual|: 2.398e-04   |deigs|: 4.267e-05  t[s]:   4029.40
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 7 iterations at t[s]:   4030.57
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.725265
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 4 iterations at t[s]:   4045.24
+SCF: Cycle: 173   G: -1617.801770009343045   dG: -4.857e-07   |Residual|: 3.780e-04   |deigs|: 1.876e-05  t[s]:   4046.00
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 3 iterations at t[s]:   4046.78
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.719098
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 5 iterations at t[s]:   4064.68
+SCF: Cycle: 174   G: -1617.801769920797142   dG: +8.855e-08   |Residual|: 2.484e-04   |deigs|: 1.841e-05  t[s]:   4065.44
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 7 iterations at t[s]:   4066.53
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.723597
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 3 iterations at t[s]:   4087.60
+SCF: Cycle: 175   G: -1617.801770531281818   dG: -6.105e-07   |Residual|: 2.080e-04   |deigs|: 1.098e-05  t[s]:   4088.32
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 2 iterations at t[s]:   4088.97
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.724596
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 2 iterations at t[s]:   4104.06
+SCF: Cycle: 176   G: -1617.801770601934322   dG: -7.065e-08   |Residual|: 1.277e-04   |deigs|: 9.064e-06  t[s]:   4104.89
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 1 iterations at t[s]:   4105.54
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.715814
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 8 iterations at t[s]:   4128.64
+SCF: Cycle: 177   G: -1617.801764795476174   dG: +5.806e-06   |Residual|: 1.238e-03   |deigs|: 4.090e-05  t[s]:   4129.42
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 9 iterations at t[s]:   4130.63
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.724299
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 3 iterations at t[s]:   4144.99
+SCF: Cycle: 178   G: -1617.801770582569588   dG: -5.787e-06   |Residual|: 7.656e-05   |deigs|: 3.590e-05  t[s]:   4145.82
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 1 iterations at t[s]:   4146.43
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.722439
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 2 iterations at t[s]:   4160.99
+SCF: Cycle: 179   G: -1617.801769479275436   dG: +1.103e-06   |Residual|: 5.396e-04   |deigs|: 1.690e-05  t[s]:   4161.80
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 4 iterations at t[s]:   4162.67
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.723017
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 2 iterations at t[s]:   4178.73
+SCF: Cycle: 180   G: -1617.801770598883422   dG: -1.120e-06   |Residual|: 1.152e-04   |deigs|: 1.418e-05  t[s]:   4179.57
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 1 iterations at t[s]:   4180.20
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.727980
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 7 iterations at t[s]:   4195.68
+SCF: Cycle: 181   G: -1617.801769110110627   dG: +1.489e-06   |Residual|: 6.386e-04   |deigs|: 2.239e-05  t[s]:   4196.46
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 4 iterations at t[s]:   4197.28
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.699081
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 9 iterations at t[s]:   4214.18
+SCF: Cycle: 182   G: -1617.801751720485527   dG: +1.739e-05   |Residual|: 1.042e-03   |deigs|: 8.580e-05  t[s]:   4214.96
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 9 iterations at t[s]:   4216.14
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.722471
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 3 iterations at t[s]:   4231.64
+SCF: Cycle: 183   G: -1617.801770165295693   dG: -1.844e-05   |Residual|: 3.547e-04   |deigs|: 6.088e-05  t[s]:   4232.33
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 3 iterations at t[s]:   4233.08
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.727910
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 6 iterations at t[s]:   4248.19
+SCF: Cycle: 184   G: -1617.801770098593806   dG: +6.670e-08   |Residual|: 1.719e-04   |deigs|: 2.208e-05  t[s]:   4248.92
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 3 iterations at t[s]:   4249.70
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.703254
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 8 iterations at t[s]:   4272.33
+SCF: Cycle: 185   G: -1617.801757952734306   dG: +1.215e-05   |Residual|: 7.410e-04   |deigs|: 7.022e-05  t[s]:   4273.14
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 10 iterations at t[s]:   4274.53
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.721637
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 3 iterations at t[s]:   4289.69
+SCF: Cycle: 186   G: -1617.801770210678797   dG: -1.226e-05   |Residual|: 2.829e-04   |deigs|: 4.895e-05  t[s]:   4290.39
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 3 iterations at t[s]:   4291.18
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.729557
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 7 iterations at t[s]:   4305.34
+SCF: Cycle: 187   G: -1617.801769557288480   dG: +6.534e-07   |Residual|: 2.600e-04   |deigs|: 2.735e-05  t[s]:   4306.06
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 7 iterations at t[s]:   4307.06
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.716643
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 8 iterations at t[s]:   4324.58
+SCF: Cycle: 188   G: -1617.801769371678574   dG: +1.856e-07   |Residual|: 1.831e-04   |deigs|: 3.548e-05  t[s]:   4325.40
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 7 iterations at t[s]:   4326.63
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.724145
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 3 iterations at t[s]:   4345.64
+SCF: Cycle: 189   G: -1617.801770224110214   dG: -8.524e-07   |Residual|: 3.325e-04   |deigs|: 1.744e-05  t[s]:   4346.26
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 3 iterations at t[s]:   4346.97
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.724509
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 0 iterations at t[s]:   4360.36
+SCF: Cycle: 190   G: -1617.801770673869669   dG: -4.498e-07   |Residual|: 3.891e-05   |deigs|: 8.993e-06  t[s]:   4361.17
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 0 iterations at t[s]:   4361.64
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.724512
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 0 iterations at t[s]:   4375.20
+SCF: Cycle: 191   G: -1617.801770674329873   dG: -4.602e-10   |Residual|: 3.905e-05   |deigs|: 9.576e-07  t[s]:   4375.89
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 0 iterations at t[s]:   4376.31
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.724515
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 0 iterations at t[s]:   4396.71
+SCF: Cycle: 192   G: -1617.801770674233694   dG: +9.618e-11   |Residual|: 3.835e-05   |deigs|: 5.640e-07  t[s]:   4397.43
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762981 of unit cell:	Completed after 0 iterations at t[s]:   4397.88
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.724522
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 0 iterations at t[s]:   4415.93
+SCF: Cycle: 193   G: -1617.801770673842611   dG: +3.911e-10   |Residual|: 3.708e-05   |deigs|: 1.234e-06  t[s]:   4416.73
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 0 iterations at t[s]:   4417.25
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.724547
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 0 iterations at t[s]:   4434.93
+SCF: Cycle: 194   G: -1617.801770673299188   dG: +5.434e-10   |Residual|: 3.481e-05   |deigs|: 6.687e-06  t[s]:   4435.59
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 0 iterations at t[s]:   4436.00
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.724546
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 0 iterations at t[s]:   4453.08
+SCF: Cycle: 195   G: -1617.801770672492239   dG: +8.069e-10   |Residual|: 3.474e-05   |deigs|: 1.917e-07  t[s]:   4454.02
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762980 of unit cell:	Completed after 0 iterations at t[s]:   4454.61
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.724546
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 0 iterations at t[s]:   4472.98
+SCF: Cycle: 196   G: -1617.801770671652321   dG: +8.399e-10   |Residual|: 3.539e-05   |deigs|: 2.231e-06  t[s]:   4473.80
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762979 of unit cell:	Completed after 0 iterations at t[s]:   4474.26
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.724607
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 0 iterations at t[s]:   4493.58
+SCF: Cycle: 197   G: -1617.801770671894474   dG: -2.422e-10   |Residual|: 3.430e-05   |deigs|: 1.439e-05  t[s]:   4494.34
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 0 iterations at t[s]:   4494.80
+	FillingsUpdate:  mu: -0.244750400  nElectrons: 259.724635
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.762978 of unit cell:	Completed after 0 iterations at t[s]:   4514.62
+SCF: Cycle: 198   G: -1617.801770672419934   dG: -5.255e-10   |Residual|: 2.900e-05   |deigs|: 2.486e-06  t[s]:   4515.46
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+
+# Ionic positions in lattice coordinates:
+ion Ni  -0.000386403475633  -0.000772806258957   0.500878581965282 0
+ion Ni   0.335878583634460   0.001272762067231   0.502920908554928 0
+ion Ni   0.665394177740462   0.001272762067231   0.502920908554928 0
+ion Ni   0.993142098228819   0.329904519364410   0.494509747867340 0
+ion Ni   0.336762420443282   0.329904519364410   0.494509747867340 0
+ion Ni   0.665394177740462   0.330788356173232   0.502920908554928 0
+ion Ni  -0.000386403475633   0.667053343283325   0.500878581965282 0
+ion Ni   0.336762420443283   0.673524841578874   0.494509747867340 0
+ion Ni   0.667439746066649   0.667053343283325   0.500878581965282 0
+ion Te   0.112945861895373   0.225891724483055   0.421948804172567 0
+ion Te   0.225236834765869   0.119573311658713   0.578288025708078 0
+ion Te   0.453703089642932   0.212963850164761   0.417440809569673 0
+ion Te   0.555555646371795   0.111111293435898   0.586241825105435 0
+ion Te   0.759260759829520   0.212963850164761   0.417440809569673 0
+ion Te   0.894336476200536   0.119573311658713   0.578288025708078 0
+ion Te   0.112945861895373   0.553721077912319   0.421948804172567 0
+ion Te   0.440775215324637   0.553721077912319   0.421948804172567 0
+ion Te   0.547093628148979   0.441430105041824   0.578288025708078 0
+ion Te   0.777437328530699   0.554874657753707   0.422809974004692 0
+ion Te   0.894336476200536   0.441430105041824   0.578288025708078 0
+ion Te   0.111792282053986   0.889229611276994   0.422809974004692 0
+ion Te   0.225236834765869   0.772330463607156   0.578288025708078 0
+ion Te   0.453703089642932   0.907406179978172   0.417440809569673 0
+ion Te   0.547093628148979   0.772330463607156   0.578288025708078 0
+ion Te   0.777437328530699   0.889229611276994   0.422809974004692 0
+ion Te   0.888888979705128   0.777777960102565   0.582289402242649 0
+
+
+# Forces in Lattice coordinates:
+force Ni   0.000000000000000  -0.034391218086820   0.077434473747232 0
+force Ni  -0.015612406697078   0.000000000000000   0.051808588782466 0
+force Ni   0.015612406697078  -0.015612406697082   0.051808588782451 0
+force Ni  -0.053103501215494   0.000000000000000  -0.124021085012761 0
+force Ni   0.053103501215480  -0.053103501215494  -0.124021085012761 0
+force Ni   0.000000000000000   0.015612406697082   0.051808588782480 0
+force Ni  -0.034391218086823   0.034391218086820   0.077434473747218 0
+force Ni   0.000000000000000   0.053103501215480  -0.124021085012761 0
+force Ni   0.034391218086823   0.000000000000000   0.077434473747218 0
+force Te   0.000000000000000  -0.043834652284316   0.067802141186474 0
+force Te   0.014750634328919  -0.036160941440271  -0.107300641444661 0
+force Te  -0.079433596686294   0.079433596686294   0.110560141093514 0
+force Te   0.000000000000000  -0.000000000000000  -0.094460080348065 0
+force Te   0.079433596686295  -0.000000000000000   0.110560141093514 0
+force Te  -0.014750634328919  -0.021410307111352  -0.107300641444548 0
+force Te  -0.043834652284317   0.043834652284317   0.067802141186360 0
+force Te   0.043834652284317  -0.000000000000000   0.067802141186360 0
+force Te   0.036160941440272  -0.014750634328919  -0.107300641444548 0
+force Te   0.000000000000000  -0.012451089944270   0.163038583994865 0
+force Te  -0.036160941440271   0.021410307111352  -0.107300641444775 0
+force Te   0.012451089944270   0.000000000000000   0.163038583994865 0
+force Te  -0.021410307111352   0.036160941440271  -0.107300641444548 0
+force Te   0.000000000000000  -0.079433596686295   0.110560141093514 0
+force Te   0.021410307111351   0.014750634328919  -0.107300641444661 0
+force Te  -0.012451089944270   0.012451089944270   0.163038583994751 0
+force Te   0.000000000000000  -0.000000000000000  -0.192737141524823 0
+
+# Energy components:
+   A_diel =       -0.5695177302091290
+   Eewald =     4336.1292601193781593
+       EH =     5702.4255949323851382
+     Eloc =   -11948.9851556592238921
+      Enl =      174.6263094485199758
+      Exc =     -281.7438284633497574
+ Exc_core =       87.8419472904707135
+       KE =      248.9014187373235245
+  MuShift =        0.0439047984288328
+-------------------------------------
+     Etot =    -1681.3300665262765961
+       TS =        0.0394123421371643
+-------------------------------------
+        F =    -1681.3694788684138075
+      muN =      -63.5677081959938732
+-------------------------------------
+        G =    -1617.8017706724199343
+
+IonicMinimize: Iter:   0  G: -1617.801770672419934  |grad|_K:  0.000e+00  t[s]:   4519.31
+IonicMinimize: Converged (|grad|_K<1.000000e-04).
+
+#--- Lowdin population analysis ---
+# oxidation-state Ni -0.898 -0.909 -0.909 -0.730 -0.730 -0.909 -0.898 -0.730 -0.898
+# oxidation-state Te +0.776 +0.838 +0.822 +0.807 +0.822 +0.838 +0.776 +0.776 +0.838 +0.813 +0.838 +0.813 +0.838 +0.822 +0.838 +0.813 +0.814
+
+
+Dumping 'NbTe2.fillings' ... done
+Dumping 'NbTe2.wfns' ... done
+Dumping 'NbTe2.fluidState' ... done
+Dumping 'NbTe2.eigenvals' ... done
+End date and time: Mon Jul  6 05:07:07 2020  (Duration: 0-1:15:22.42)
+Done!

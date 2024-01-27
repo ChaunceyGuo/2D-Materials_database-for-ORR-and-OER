@@ -1,0 +1,81 @@
+#---Pseudopotentials ---
+ion-species GBRV/$ID_pbe.uspp
+elec-cutoff 20 #Ecutsforpsiandrho
+#---Geometry---
+coulomb-interaction Slab 001 #Make z nonperiodic
+coulomb-truncation-embed 0.5 0.5 0.5 #Specify center
+cache-projectors no
+#coordination
+lattice Triclinic 13.31220 13.31220 18.12880 90.0000 90.0000 120.0000
+latt-scale 1.8897260 1.8897260 1.8897260
+coords-type Lattice 
+ion  Nb     -0.000000000        -0.000000000         0.500000000 1
+ion  Nb      0.250000000        -0.000000000         0.500000000 1
+ion  Nb      0.500000000        -0.000000000         0.500000000 1
+ion  Nb      0.750000018        -0.000000000         0.500000000 1
+ion  Nb     -0.000000003         0.249999994         0.500000000 1
+ion  Nb      0.249999997         0.249999994         0.500000000 1
+ion  Nb      0.500000006         0.249999994         0.500000000 1
+ion  Nb      0.749999988         0.249999994         0.500000000 1
+ion  Nb     -0.000000006         0.499999987         0.500000000 1
+ion  Nb      0.249999994         0.499999987         0.500000000 1
+ion  Nb      0.499999994         0.499999987         0.500000000 1
+ion  Nb      0.750000029         0.499999987         0.500000000 1
+ion  Nb     -0.000000008         0.750000002         0.500000000 1
+ion  Nb      0.249999992         0.750000002         0.500000000 1
+ion  Nb      0.499999992         0.750000002         0.500000000 1
+ion  Nb      0.750000010         0.750000002         0.500000000 1
+ion  S       0.166669996         0.083329998         0.413710010 1
+ion  S       0.166669996         0.083329998         0.586289990 1
+ion  S       0.416669987         0.083329998         0.413710010 1
+ion  S       0.416669987         0.083329998         0.586289990 1
+ion  S       0.666670005         0.083329998         0.413710010 1
+ion  S       0.666670005         0.083329998         0.586289990 1
+ion  S       0.916669987         0.083329998         0.413710010 1
+ion  S       0.916669987         0.083329998         0.586289990 1
+ion  S       0.166669998         0.333330002         0.413710010 1
+ion  S       0.166669998         0.333330002         0.586289990 1
+ion  S       0.416669980         0.333330002         0.413710010 1
+ion  S       0.416669980         0.333330002         0.586289990 1
+ion  S       0.666670052         0.333330002         0.413710010 1
+ion  S       0.666670052         0.333330002         0.586289990 1
+ion  S       0.916670034         0.333330002         0.413710010 1
+ion  S       0.916670034         0.333330002         0.586289990 1
+ion  S       0.166669993         0.583329975         0.413710010 1
+ion  S       0.166669993         0.583329975         0.586289990 1
+ion  S       0.416669975         0.583329975         0.413710010 1
+ion  S       0.416669975         0.583329975         0.586289990 1
+ion  S       0.666670011         0.583329975         0.413710010 1
+ion  S       0.666670011         0.583329975         0.586289990 1
+ion  S       0.916669993         0.583329975         0.413710010 1
+ion  S       0.916669993         0.583329975         0.586289990 1
+ion  S       0.166669992         0.833329990         0.413710010 1
+ion  S       0.166669992         0.833329990         0.586289990 1
+ion  S       0.416669974         0.833329990         0.413710010 1
+ion  S       0.416669974         0.833329990         0.586289990 1
+ion  S       0.666670027         0.833329990         0.413710010 1
+ion  S       0.666670027         0.833329990         0.586289990 1
+ion  S       0.916670010         0.833329990         0.413710010 1
+ion  S       0.916670010         0.833329990         0.586289990 1
+#---Electronic ---
+kpoint-folding 4 4 1 #Gamma-centeredk-mesh
+elec-smearing Gauss 0.0073499
+#coulomb-truncation-ion-margin 1
+#target-mu -0.2447504 #U=2.0V vs. SHE #Fixechempotential
+#target-mu -0.1712518 #U=2.0V vs. SHE #Fixechempotential
+#For the CANDLE solvation model, mu_SHE = -4.66 eV
+#muSHE = 0.1712518 U=0 V vs. SHE
+core-overlap-check None
+#---Fluid---
+elec-initial-charge 0
+spintype z-spin
+elec-initial-magnetization 20 no
+fluid LinearPCM #Classof solvation model
+pcm-variant CANDLE #Specificmodelwithinclass
+fluid-solvent H2O #Aqueous electrolyte
+fluid-cation Na+ 1. #1 mol/L Na+ cation
+fluid-anion F- 1. #1 mol/L F- anion
+#---Outputs ---
+dump-name NbTe2.$VAR      #This will overwrite outputs from successive runs
+initial-state NbTe2.$VAR  #This will initialize from the preceding calculation
+dump End State
